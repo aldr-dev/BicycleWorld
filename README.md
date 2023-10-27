@@ -11,4 +11,4 @@
     - npm install pug (установка препроцессора pug)
   3. pug -w pug/pages -o ./html -P (запуск рендра файлов pug в папку html)
     - npm install sass (установка препроцессора sass)
-  4. sass -w sass/style.sass ./css/style.css (запуст рендра файдов sass в папку css)
+  4. sass -w sass/style.sass ./css/style.css (запуст рендра файлов sass в папку css)
