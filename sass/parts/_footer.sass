@@ -1,0 +1,145 @@
+.footer
+	position: relative
+	margin-top: auto
+	background: #282c2f
+
+	.container
+		+laptop
+			display: block
+
+.item__circle
+	position: relative
+	display: inline-block
+	border-radius: 50%
+	width: 70px
+	height: 70px
+	background: #32373a
+	+desktop
+		left: 50%
+		right: 50%
+		transform: translate(-50%)
+		margin-bottom: 15px
+
+.item__circle:hover
+	.fa-bicycle, .fa-heart, .fa-medkit
+		color: #027587
+		transition: 0.4s
+		cursor: pointer
+
+.item__info
+	color: white
+	font-size: 1.1rem
+	margin-left: .8rem
+	+desktop
+		text-align: center
+
+.fa-bicycle, .fa-heart, .fa-medkit
+	position: absolute
+	color: #fff
+	font-size: 30px
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	
+.map-wrap
+	position: relative
+	display: inline-block
+	margin-left: auto
+	+laptop
+		position: relative
+		display: block
+		overflow: hidden
+		height: 0
+		padding-bottom: 56.25%
+
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+.map-wrap__map
+	width: 625px
+	height: 380px
+	+laptop
+		width: 625px
+		height: 380px
+		object-fit: cover
+	
+.footer__copyright
+	padding: 1.2rem 0 
+	color: white
+	font-size: 0.7rem
+	text-align: right
+	transition: color
+	transition-duration: .3s
+	+laptop
+		text-align: center
+	+desktop
+		padding: 1.2rem 5px
+
+.footer__copyright:hover
+	color: #027587
+
+.contact__item
+	padding: 15px 0
+	display: flex
+	align-items: center
+	+desktop
+		display: block
+		padding: 15px 10px 15px 0
+
+.wrap 
+	margin-top: 2rem
+	+desktop
+		padding: 0 5px
+
+.map-wrap
+	+laptop 
+		margin-top: 2rem
+
+.footer_link_media
+	text-decoration: none
+
+.scroll_top
+	display: none
+	position: fixed
+	bottom: 1rem
+	right: 1rem
+	z-index: 1000
+
+.fa-chevron-circle-up
+	font-size: 4rem
+	color: #027587
+	transition: 1s
+	animation: scrollup 10s infinite
+
+@keyframes scrollup 
+	0%
+		transform: scale(1)
+	10%
+		transform: scale(1.2)
+	20%
+		transform: scale(1)
+	30%
+		transform: scale(1.2)
+	40%
+		transform: scale(1)
+	50%
+		transform: scale(1.2)
+	60%
+		transform: scale(1)
+	70%
+		transform: scale(1.2)
+	80%
+		transform: scale(1)	
+	90%
+		transform: scale(1.2)
+	100%
+		transform: scale(1)
+
+
+
+
+

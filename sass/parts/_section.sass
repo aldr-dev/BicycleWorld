@@ -1,0 +1,155 @@
+.info_block
+	position: relative
+	display: flex
+	font-family: 'BerlinSansFBDemi-Bold'
+	color: #6d6e72
+	text-transform: uppercase
+	margin-top: 3.875rem
+	+desktop
+		flex-wrap: wrap
+
+.item
+	+desktop
+	position: relative
+	flex: 1 1 50%
+	+desktop
+		flex-basis: 100%
+
+.item__wrapper
+	margin: 0 2rem 0 0
+	+desktop
+		padding: 0 1rem
+		margin: 0
+
+.item__headline
+	font-size: 1.875rem
+	+phone 
+		font-size: 8vw
+		line-height: 30px
+		text-align: center
+
+.item__subtitle
+	margin: 0
+	font-size: 3.5625rem
+	line-height: 50px
+	+phone 
+		font-size: 8vw
+		line-height: 30px
+		text-align: center
+
+.item__line
+	background: #6d6e72
+	height: 1.2px
+
+.item__desc
+	margin-bottom: 0
+	font-family: Arial
+	text-transform: none
+	text-align: justify
+
+.item.overlay
+	+desktop
+		display: none
+
+.overlay:before
+	content: ''
+	position: absolute
+	top: 0%
+	left: 0%
+	bottom: 0%
+	right: 0%
+	background: rgba(0,0,0, .5)
+	z-index: 100
+
+.item__overlay_blue
+	content: ''
+	padding: 1rem 0
+	position: absolute
+	top: 50%
+	left: 0
+	width: 100%
+	transform: translateY(-50%)
+	background: rgba(18,85,126, .8)
+	text-align: center
+	+phone
+		padding: .6rem 0 
+
+.item__name
+	position: relative
+	font-family: 'BerlinSansFBDemi-Bold'
+	font-size: 3rem
+	color: white
+	z-index: 101
+	+phone
+		font-size: 2rem
+
+.item__catalog
+	text-align: center
+	position: relative
+	margin-top: 2rem
+	padding: 8rem 0
+	background: url("../img/hero_canyon_block.jpg") no-repeat center center
+	background-size: cover
+
+.item__catalog_headline
+	position: relative 
+	font-family: 'BerlinSansFBDemi-Bold'
+	font-size: 3.75rem
+	color: #fff
+	z-index: 200
+	margin-bottom: 2rem
+	text-transform: uppercase
+
+.item__catalog_btn
+	text-decoration: none
+	padding: .9rem 4rem
+	position: relative
+	background: #027587
+	z-index: 201
+	color: white
+	text-transform: uppercase
+	transition-duration: .5s
+	border: 2px solid transparent
+	border-radius: 5px
+
+.item__catalog_btn:hover
+	border-color: #004e5a
+	background: rgba(0,0,0, .5)
+
+.item__catalog_giant
+	text-align: center
+	position: relative
+	margin-top: 2rem
+	padding: 8rem 0
+	background: url("../img/hero_giant_block.jpg") no-repeat center top
+	background-size: cover
+
+.item__catalog_cube
+	text-align: center
+	position: relative
+	margin-top: 2rem
+	background: url("../img/hero_cube_block.jpg") no-repeat 70% 0
+	padding: 8rem 0
+	background-size: cover
+
+.tutorial__wrap
+	position: relative
+	max-width: 774px
+	margin: 5rem auto
+	text-align: center
+	+laptop 
+		padding: 0 5px
+		overflow: hidden
+
+.tutorial__laptop
+	position: relative
+	z-index: 100
+	width: 100%
+
+.tutorial__video
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translate(-50%, -5%)
+	width: calc(100% - 3rem)
+	height: 100%

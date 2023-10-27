@@ -1,0 +1,88 @@
+.hero
+	.flex-container
+		flex-direction: column
+		justify-content: space-evenly
+		height: 100%
+
+.hero__img
+	position: relative
+	background: url("../img/hero_block.jpg") no-repeat 
+	min-height: 100vh
+	background-size: cover
+	object-fit: cover
+
+	+min
+		position: relative
+		background: url("../img/hero_block_mobile.jpg") no-repeat center
+		min-height: 100vh
+		background-size: cover
+		object-fit: cover
+
+.hero__overlay
+	position: absolute
+	content: ''
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0, .5)
+
+.hero__headline
+	color: white
+	font-size: 5.3vw
+	font-weight: bold
+	margin-top: 0
+
+	+phone
+		font-size: 11vw
+
+	+tablet
+		font-size: 8vw
+
+	+laptop 
+		font-size: 8vw
+
+	+desktop
+		font-size: 8vw
+		padding: 0 !important
+
+	+desktopL
+		padding: 0 90px
+
+.hero-block__desc 
+	text-align: center
+
+.hero-block__brand
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+	+tablet
+		display: block
+
+	li
+		margin-left: 8rem
+		text-align: center
+		font-family: 'BerlinSansFBDemi-Bold'
+		font-size: 2.25rem
+
+		+tablet
+			margin: 1rem 0 0
+
+		&:first-child
+			margin: 0
+
+.brand-name__text
+	color: #fff
+
+	+tablet
+		font-size: 5vw
+
+	+min
+		font-size: 7vw
+
+
+

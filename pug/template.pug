@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+		meta(name='theme-color', content='#ffffff')
+		block title
+			title Bicycle!World
+		link(rel='apple-touch-icon', sizes='57x57', href='../img/favicon/apple-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='60x60', href='../img/favicon/apple-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='../img/favicon/apple-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='../img/favicon/apple-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='../img/favicon/apple-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='../img/favicon/apple-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='144x144', href='../img/favicon/apple-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='../img/favicon/apple-icon-152x152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href='../img/favicon/apple-icon-180x180.png')
+		link(rel='icon', type='image/png', sizes='192x192', href='../img/favicon/android-icon-192x192.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='../img/favicon/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='96x96', href='../img/favicon/favicon-96x96.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='../img/favicon/favicon-16x16.png')
+		link(rel='manifest', href='../img/favicon/manifest.json')
+		link(rel="stylesheet", href="../css/style.css")
+	body
+		.wrapper
+			block header
+				include parts/header
+
+			block hero
+				include parts/hero
+
+			block section
+				include parts/section	
+
+			block footer
+				include parts/footer
+
+
+		script(src='../node_modules/jquery/dist/jquery.min.js')
+		script.
+			var touchMap = document.querySelector('.map-wrap__map')
+			touchMap.addEventListener("touchstart", function(){}, {passive: false} )
+			var video = document.querySelector('.tutorial__video');
+			var playTrigger = document.querySelector('.tutorial__laptop');
+			if (video && playTrigger) {
+				playTrigger.addEventListener('click', function(){
+					if (video.paused) {
+						video.play();
+					} else {
+						video.pause();
+					}
+				})
+			}
+			
+			// Look for .hamburger
+			var hamburger = document.querySelector(".hamburger");
+			var menu = document.querySelector(".nav");
+			// On click
+			hamburger.addEventListener("click", function() {
+			// Toggle class "is-active"
+			hamburger.classList.toggle("is-active");
+			menu.classList.toggle("is-active");
+
+			// Do something else, like open/close menu
+			});
+
+			$(document).ready(function() {
+			var duration = 500;
+				var scrollUp = $('.scroll_top');
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 400) {
+						scrollUp.fadeIn(duration);
+					} else {
+						scrollUp.fadeOut(duration);
+					}
+				});
+				scrollUp.click(function(event) {
+					event.preventDefault();
+					$('html').animate({scrollTop: 0}, duration);
+					return false;
+			})
+			});
+
+			$(document).ready(function() {
+				$("a.nav__link").click(function() {
+					var elementClick = $(this).attr("href")
+					var destination = $(elementClick).offset().top;
+					jQuery("html:not(:animated),body:not(:animated)").animate({
+					scrollTop: destination
+					}, 800);
+					return false;
+				});
+				});
+	
+	
+	
