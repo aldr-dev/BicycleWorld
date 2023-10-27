@@ -6,7 +6,7 @@
    правильно выбирать велосипед.
 
 - Для запуска проекта следует использовать команды:
-  1. brew install node (установка node.js для mac)
+  1 brew install node (установка node.js для mac)
   2. npm i (установка всех пакетов из зависимостей «package.json»)
     - npm install pug (установка препроцессора pug)
   3. pug -w pug/pages -o ./html -P (запуск рендра файлов pug в папку html)
