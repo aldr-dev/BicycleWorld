@@ -21,5 +21,3 @@
   3. pug -w pug/pages -o ./html -P (запуск рендра файлов pug в папку html)
     - npm install sass (установка препроцессора sass)
   4. sass -w sass/style.sass ./css/style.css (запуст рендра файлов sass в папку css)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aldr-dev)](https://github.com/anuraghazra/github-readme-stats)
